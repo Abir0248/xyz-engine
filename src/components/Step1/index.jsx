@@ -75,7 +75,7 @@ function Step1({ setFormData }) {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-offwhite w-4/5 mx-auto">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-offwhite w-full mx-auto">
       <form
         className="p-8 bg-opacity-80 bg-lightgray rounded-lg shadow-xl w-3/5 max-w-screen-md mx-auto"
         onSubmit={handleSubmit}
