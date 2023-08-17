@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Step1 from "./components/Step1";
 // import Step2 from "./components/Step2";
 // import Result from "./components/Result";
+import Navbar from "./components/Navbar";
 import "./index.css";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Step1 />} />
         {/* <Route path="/step-2" element={<Step2 />} /> */}
