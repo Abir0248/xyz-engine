@@ -77,7 +77,7 @@ function Step1({ setFormData }) {
               {
                 label: "X values",
                 data: xs,
-                borderColor: "blue",
+                borderColor: "#2563EB",
                 fill: false,
               },
             ],
