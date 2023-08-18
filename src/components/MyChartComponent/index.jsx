@@ -8,7 +8,7 @@ import {
   LinearScale,
 } from "chart.js";
 
-// Register the necessary controllers and scales for Chart.js
+// Register the necessary controllers and scales
 Chart.register(
   LineController,
   PointElement,
@@ -19,25 +19,43 @@ Chart.register(
 
 function MyChartComponent({ data }) {
   const chartRef = useRef(null);
-  const chartInstance = useRef(null); // store the chart instance here
+  const chartInstance = useRef(null);
 
   useEffect(() => {
     if (chartInstance.current) {
-      chartInstance.current.destroy(); // destroy previous instance
+      chartInstance.current.destroy();
     }
 
     chartInstance.current = new Chart(chartRef.current, {
-      type: "line", // change this to your desired type if not 'line'
+      type: "line",
       data: data,
-      options: { maintainAspectRatio: false }, // or any other options you need
+      options: {
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: "KP",
+            },
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: "Values",
+            },
+          },
+        },
+      },
     });
 
     return () => {
       if (chartInstance.current) {
-        chartInstance.current.destroy(); // cleanup on unmount
+        chartInstance.current.destroy();
       }
     };
-  }, [data]); // re-run effect if data changes
+  }, [data]);
 
   return <canvas ref={chartRef}></canvas>;
 }
