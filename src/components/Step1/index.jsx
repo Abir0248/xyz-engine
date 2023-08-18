@@ -77,7 +77,8 @@ function Step1({ setFormData }) {
               {
                 label: "X values",
                 data: xs,
-                borderColor: "#2563EB",
+                tension: 0.1,
+                borderColor: "rgb(75, 192, 192)",
                 fill: false,
               },
             ],
