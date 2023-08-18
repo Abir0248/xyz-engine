@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Step1 from "./components/Step1";
 import Step2 from "./components/Step2";
-// import Result from "./components/Result";
+import Result from "./components/Result";
 import Navbar from "./components/Navbar";
 import "./index.css";
 
@@ -30,7 +30,7 @@ function App() {
         {/* <Route path="/result" element={<Result />} /> */}
         <Route path="/" element={<Step1 setFormData={setFormData} />} />
         <Route path="/step-2" element={<Step2 formData={formData} />} />
-        {/* <Route path="/result" element={<Result formData={formData} />} /> */}
+        <Route path="/result" element={<Result formData={formData} />} />
       </Routes>
     </Router>
   );

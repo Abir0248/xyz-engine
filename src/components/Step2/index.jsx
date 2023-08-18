@@ -12,7 +12,7 @@ function Step2({ formData }) {
     navigate("/result");
   };
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-offwhite w-4/5 mx-auto">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-offwhite w-full mx-auto">
       <div className="p-8 bg-opacity-80  bg-lightgray rounded-lg shadow-xl w-3/5 max-w-screen-md mx-auto">
         <h1 className="text-2xl font-bold mb-6 hover:text-blue-600">
           Review Details
