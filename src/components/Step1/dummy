@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Papa from "papaparse";
-import MyChartComponent from "../MyChartComponent";
+import { Line } from "react-chartjs-2";
 
 function Step1({ setFormData }) {
   const navigate = useNavigate();
@@ -217,7 +217,7 @@ function Step1({ setFormData }) {
         {/* Conditional render of the chart */}
         {chartData && (
           <div className="my-4">
-            <MyChartComponent data={chartData} />
+            <Line data={chartData} options={{ maintainAspectRatio: false }} />
           </div>
         )}
 

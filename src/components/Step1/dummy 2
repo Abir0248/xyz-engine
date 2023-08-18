@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Papa from "papaparse";
-import MyChartComponent from "../MyChartComponent";
 
 function Step1({ setFormData }) {
   const navigate = useNavigate();
@@ -19,8 +18,6 @@ function Step1({ setFormData }) {
     maxZ: "",
     minZ: "",
   });
-
-  const [chartData, setChartData] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -66,22 +63,6 @@ function Step1({ setFormData }) {
             maxZ: maxZ,
             minZ: minZ,
           }));
-
-          // Extract KP and X values for the chart
-          const kps = data.map((row) => row.KP);
-          const xs = data.map((row) => row.X);
-
-          setChartData({
-            labels: kps,
-            datasets: [
-              {
-                label: "X values",
-                data: xs,
-                borderColor: "blue",
-                fill: false,
-              },
-            ],
-          });
         },
       });
     }
@@ -103,7 +84,6 @@ function Step1({ setFormData }) {
           Project Details
         </h1>
         <div className="grid grid-cols-2 gap-4 mb-4">
-          {/* ... (Your input fields here) */}
           <div>
             <label className="text-gray-700">Project Name</label>
             <input
@@ -214,13 +194,6 @@ function Step1({ setFormData }) {
           </div>
         </div>
 
-        {/* Conditional render of the chart */}
-        {chartData && (
-          <div className="my-4">
-            <MyChartComponent data={chartData} />
-          </div>
-        )}
-
         <div className="text-center">
           <button
             type="submit"
@@ -235,3 +208,5 @@ function Step1({ setFormData }) {
 }
 
 export default Step1;
+
+//index
