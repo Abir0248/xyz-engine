@@ -40,22 +40,22 @@ const Navbar = () => {
       </ul>
       {/* Responsive */}
       <ul
-        className={`md:hidden  w-full h-screen fixed bg-lightgray top-[83px]
-        ${toggle ? "left-[0]" : "left-[-100%]"}  `}
+        className={`md:hidden duration-300  w-full  h-screen fixed bg-lightgray top-[83px]
+        ${toggle ? "left-[0]" : "left-[-100%]"}  items-center`}
       >
-        <li className="hover:text-blue-600 cursor-pointer p-5">
+        <li className="hover:text-blue-600 text-xl cursor-pointer p-5 text-center">
           <Link to="/">Home</Link>
         </li>
-        <li className="hover:text-blue-600 cursor-pointer p-5">
+        <li className="hover:text-blue-600 text-xl cursor-pointer p-5 text-center">
           <Link to="/">Resources</Link>
         </li>
-        <li className="hover:text-blue-600 cursor-pointer p-5">
+        <li className="hover:text-blue-600 text-xl cursor-pointer p-5 text-center">
           <Link to="/">Projects</Link>
         </li>
-        <li className="hover:text-blue-600 cursor-pointer p-5">
+        <li className="hover:text-blue-600 text-xl cursor-pointer p-5 text-center">
           <Link to="/">About</Link>
         </li>
-        <li className="hover:text-blue-600 cursor-pointer p-5">
+        <li className="hover:text-blue-600 text-xl cursor-pointer p-5 text-center">
           <Link to="/">Log Out</Link>
         </li>
       </ul>
