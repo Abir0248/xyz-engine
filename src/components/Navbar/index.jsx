@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-lightgray  mx-auto flex py-6 justify-between items-center navbar p-4">
       <div className="text-3xl font-bold hover:text-blue-600 cursor-pointer">
-        XYZ Company
+        <Link to="/">XYZ Company</Link>
       </div>
       {toggle ? (
         <AiOutlineClose
