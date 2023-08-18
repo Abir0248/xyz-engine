@@ -80,7 +80,9 @@ function Step1({ setFormData }) {
         className="p-8 bg-opacity-80 bg-lightgray rounded-lg shadow-xl w-3/5 max-w-screen-md mx-auto"
         onSubmit={handleSubmit}
       >
-        <h1 className="text-2xl font-bold mb-6">Project Details</h1>
+        <h1 className="text-2xl font-bold mb-6 hover:text-blue-600">
+          Project Details
+        </h1>
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
             <label className="text-gray-700">Project Name</label>

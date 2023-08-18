@@ -14,7 +14,9 @@ function Step2({ formData }) {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-offwhite w-4/5 mx-auto">
       <div className="p-8 bg-opacity-80  bg-lightgray rounded-lg shadow-xl w-3/5 max-w-screen-md mx-auto">
-        <h1 className="text-2xl font-bold mb-6">Review Details</h1>
+        <h1 className="text-2xl font-bold mb-6 hover:text-blue-600">
+          Review Details
+        </h1>
 
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
@@ -120,13 +122,13 @@ function Step2({ formData }) {
         <div className="flex justify-between mt-6">
           <button
             onClick={handleBack}
-            className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md"
+            className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md"
           >
             Back
           </button>
           <button
             onClick={handleSubmit}
-            className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded"
+            className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded"
           >
             Confirm & Submit
           </button>
